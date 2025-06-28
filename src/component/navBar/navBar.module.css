@@ -1,0 +1,68 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 55px;
+  border-bottom: solid rgb(196, 194, 194) 1.5px;
+  width: 100%;
+  background-color: white;
+}
+
+.nav b {
+  font-family: roboto;
+  font-size: 19px;
+}
+
+.icon_01 {
+  color: blue;
+  font-size: 24px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_02 {
+  background-color: rgb(232, 232, 243);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.sec_01 {
+  width: 100%;
+  border-bottom: solid rgb(196, 194, 194) 1.5px;
+  display: flex;
+  padding:20px;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sec_01 div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sec_01 div:focus {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.icon {
+  font-size: 12px;
+}
+.close{
+  color: brown;
+}

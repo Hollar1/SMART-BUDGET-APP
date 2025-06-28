@@ -1,0 +1,54 @@
+.container {
+  padding: 15px;
+}
+
+.wrapper {
+  margin-top: 5px;
+  padding:40px 15px;
+  display: flex;
+  max-width: 500px;
+  margin: auto;
+  flex-direction: column;
+  background-color: rgb(243, 244, 244);
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.wrapper div label {
+  font-family: poppins;
+  font-size: 12px;
+}
+
+.wrapper div input {
+  height: 35px;
+  border: solid gray 0.5px;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.wrapper div select {
+  height: 35px;
+  border: solid gray 0.5px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  position: relative;
+}
+.wrapper div select option {
+  position: absolute;
+  top: 200px;
+}
+
+.wrapper div button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+  border: none;
+}

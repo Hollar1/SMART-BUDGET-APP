@@ -1,0 +1,133 @@
+.wrapper {
+  padding: 0px 20px;
+}
+
+.sec_01 div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border: 0.5px solid rgb(191, 244, 191);
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec_01 div span {
+  color: blue;
+}
+.sec_01 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_01 div b {
+}
+
+.sec_02 div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border: 0.5px solid rgb(191, 244, 191);
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec_02 div span {
+  color: blue;
+}
+.sec_02 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_02 div b {
+}
+
+.sec_03 div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border: 0.5px solid rgb(244, 191, 191);
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec_03 div span {
+  color: blue;
+}
+.sec_03 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_03 div b {
+}
+
+.sec_04 div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.sec_04 div span {
+  color: blue;
+}
+.sec_04 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_04 div b {
+}
+
+.sec_05 div {
+  margin-top: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec_05 div span {
+  color: blue;
+}
+.sec_05 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_05 div b {
+}
+
+.sec_06 div {
+  margin-top: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec_06 div span {
+  color: blue;
+}
+.sec_06 div p {
+  margin-top: 5px;
+  color: rgb(83, 81, 81);
+}
+.sec_06 div b {
+}

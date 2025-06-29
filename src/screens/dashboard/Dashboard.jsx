@@ -8,6 +8,7 @@ function Dashboard() {
     <div>
       <NavBar />
       <div className={dashboardStyles.wrapper}>
+
         <section className={dashboardStyles.sec_01}>
           <div>
             <span>

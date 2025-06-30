@@ -37,6 +37,7 @@ const {addTransactions}= useTransactionContext()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log({holdData})
   addTransactions(holdData)
     // clearData();
   };

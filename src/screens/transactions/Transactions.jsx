@@ -6,8 +6,13 @@ import { useTransactionContext } from "../../utilities/theTransactionContex";
 import { FaTrash } from "react-icons/fa6";
 
 function Transactions() {
-  const { deleteTransaction, transactions, handleFilterTransaction } =
-    useTransactionContext();
+  // 4. Import filtered transactions
+  const {
+    deleteTransaction,
+    transactions,
+    filteredTransactions,
+    handleFilterTransaction,
+  } = useTransactionContext();
   // console.log(transactions);
 
   const handleDelete = (transaction_id) => {
@@ -46,8 +51,9 @@ function Transactions() {
               </select>
             </div>
           </form>
-
-          {transactions?.map((trans) => (
+          {/* 5. use filteredTransactions instead of transactions */}
+          {/* {transactions?.map((trans) => ( */}
+          {filteredTransactions?.map((trans) => (
             <div key={trans.id}>
               <span>{trans.transactionType}</span>
               <span>{trans.description}</span>

@@ -4,24 +4,40 @@ export const TransactionContext = createContext();
 
 export const TransactionsProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([]);
-  console.log(transactions);
+
+  // 1. Initialized Filtered transactions state
+  const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   const addTransactions = (transaction) => {
-    setTransactions([
+    const newTransactions = [
       ...transactions,
       {
         ...transaction,
         id: transactions.length + 1,
       },
-    ]);
-
-    localStorage.setItem("transactions", JSON.stringify(transactions));
+    ];
+    setTransactions(newTransactions);
+    localStorage.setItem("transactions", JSON.stringify(newTransactions));
   };
 
   useEffect(() => {
     const fetchTransactions = () => {
-      const getTransactions = JSON.parse(localStorage.getItem("transactions"));
+      // Explanation:
+      // When we use JSON.parse(localStorage.getItem("transactions")), if there are no transactions saved yet,
+      // localStorage.getItem("transactions") will return null. If we try to parse null, JSON.parse(null) gives us null.
+      // This is a problem because we want an array ([]) to work with, not null.
+      // If we try to use ...transactions when transactions is null, JavaScript will throw an error because you can't spread null.
+      //
+      // Solution:
+      // To fix this, we use the "??" (nullish coalescing) operator to provide a default value.
+      // If localStorage.getItem("transactions") is null, we use '[]' instead.
+      // So, JSON.parse(localStorage.getItem("transactions") ?? '[]') will always give us an array,
+      // either the saved transactions or an empty array if there are none yet.
+      const getTransactions = JSON.parse(localStorage.getItem("transactions") ?? '[]');
       setTransactions(getTransactions);
+
+      // 2. Make sure it contains all transactions when page loads
+      setFilteredTransactions(getTransactions)
     };
 
     fetchTransactions();
@@ -36,17 +52,19 @@ export const TransactionsProvider = ({ children }) => {
   };
 
   const handleFilterTransaction = (transactionType) => {
-    console.log(transactionType);
     const filterTransactionType = transactions.filter(
       (transaction) => transaction.transactionType === transactionType
     );
-    setTransactions(filterTransactionType);
+
+    // 3. set filteredTransactions state to the result of filtering transactions
+    setFilteredTransactions(filterTransactionType);
   };
 
   return (
     <TransactionContext.Provider
       value={{
         transactions,
+        filteredTransactions,
         addTransactions,
         deleteTransaction,
         handleFilterTransaction,

@@ -11,16 +11,13 @@ function Transactions() {
     deleteTransaction,
     transactions,
     filteredTransactions,
+
     handleFilterTransaction,
+    handleFilterByCategory,
   } = useTransactionContext();
-  // console.log(transactions);
 
   const handleDelete = (transaction_id) => {
     deleteTransaction(transaction_id);
-  };
-
-  const handleFilter = (eValue) => {
-    handleFilterTransaction(eValue);
   };
 
   return (
@@ -32,7 +29,7 @@ function Transactions() {
 
           <form action="">
             <div>
-              <select onChange={(e) => handleFilter(e.target.value)}>
+              <select onChange={(e) => handleFilterTransaction(e.target.value)}>
                 <option value="">--Select--</option>
                 <option value="Expenses">Expenses</option>
                 <option value="Income">Income</option>
@@ -40,14 +37,14 @@ function Transactions() {
             </div>
 
             <div>
-              <select>
+              <select onChange={(e) => handleFilterByCategory(e.target.value)}>
                 <option value="">--Select--</option>
-                <option value="">Food & dinning</option>
-                <option value="">Transportation</option>
-                <option value="">Shopping</option>
-                <option value="">Entertainment</option>
-                <option value="">Bill & Utilities</option>
-                <option value="">Health Care</option>
+                <option value="Food & dinning">Food & dinning</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Bill & Utilities">Bill & Utilities</option>
+                <option value="Health Care">Health Care</option>
               </select>
             </div>
           </form>
